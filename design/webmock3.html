@@ -1,0 +1,207 @@
+<html>
+<head>
+  <meta name"viewport" content="width=device-width, initial-scale=1">
+  <style>
+  .container {
+    position: relative;
+    width: 50%;
+  }
+  .container img{
+    width: 200%;
+    height: auto;
+  }
+  .container .btn0{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top : 12.85%;    --21em;
+    left: 32.25%;
+    background-color: green;
+    color: red;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn1{
+    position: absolute;
+    height: 70px;
+    width: 35px;      --50px;
+    top: 12.85%;         --47%;
+    left: 46.5%;      --47%;
+    background-color: green; --white;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.75;
+    opacity: 0.5;
+    --font-size
+  }
+  .container .btn2{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 12.85%;
+    left: 60.75%;
+    background-color: red;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn3{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 12.85%;
+    left: 75.25%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn4{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 12.85%;
+    left: 133.75%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn_aux{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 4.4%;
+    left: 89.5%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn6{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 12.85%;
+    left: 148.25%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn7{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 12.85%;
+    left: 162.5%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn89{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 12.85%;
+    left: 177%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn_m1{
+    position: absolute;
+    height: 30px;
+    width: 50px;
+    top: 2.25%;
+    left: 13.3%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn_m2{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 4.5%;
+    left: 22.7%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .container .btn_tie{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    top: 4.4%;
+    left: 103.75%;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  --body{
+    --background-image: url("oneline-wLabels-auxRelocated.svg");
+    --background-image: url("newOneline.svg");
+    --background-repeat: no-repeat,repeat;
+  --}
+  </style>
+</head>
+  <body>
+    
+    <div class="container">
+
+      <img src="newOneline.svg">
+      <!--<form action="test.php" method="POST">-->
+      <button class="btn0"    id="Bay1"   onclick="colorchange('Bay1')" ></button>      <!-- bay 1 button-->
+      <button class="btn1"    id="Bay2"   onclick="colorchange('Bay2')" ></button>      <!-- bay 2 button-->
+      <button class="btn2"    id="Bay3"   onclick="colorchange('Bay3')" ></button>      <!-- bay 3 button-->
+      <button class="btn3"    id="Bay4"   onclick="colorchange('Bay4')"></button>      <!-- bay 4 button-->
+      <button class="btn4"    id="Bay5"   onclick="colorchange('Bay5')"></button>      <!-- bay 5 button-->
+      <button class="btn_aux" id="AUX"    onclick="colorchange('AUX')"></button>       <!-- aux button-->
+      <button class="btn6"    id="Bay6"   onclick="colorchange('Bay6')"></button>      <!-- bay 6 button-->
+      <button class="btn7"    id="Bay7"   onclick="colorchange('Bay7')"></button>      <!-- bay 7 button-->
+      <button class="btn89"   id="Bay8_9" onclick="colorchange('Bay8_9')"></button>    <!-- bay 8&9 button-->
+      <button class="btn_m1"  id="M1"     onclick="colorchange('M1')"></button>        <!-- main 1 button-->
+      <button class="btn_m2"  id="M2"     onclick="colorchange('M2')"></button>        <!-- main 2 button-->
+      <button class="btn_tie" id="TIE"    onclick="colorchange('TIE')"></button>       <!-- tie button-->
+      <!--</form>-->
+    </div>
+
+    <script>
+      function colorchange(id){
+
+        var conf=confirm("Are you sure you want to toggle "+id+" breaker?");
+        var bgColor=document.getElementById("id").style.backgroundColor;
+
+        if (conf){
+          if(bgColor=="green"){
+            //document.getElementById(id).value=0;
+            document.getElementById("id").style.background="red";
+          }
+          else(bgColor=="red"){
+            //document.getElementById(id).value=1;
+            document.getElementById("id").style.background="green";
+          }
+        }
+      }
+      </script>
+  </body>
+</html>

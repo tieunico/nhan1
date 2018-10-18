@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    function send_data(){
+                       var request = $.ajax({
+                          type: "POST",
+                          url: "testajax.php",
+                          data: {data_to_send:"what is my name?"},
+                          success:function(data){
+                              alert(data);
+                          }
+                        });
+                    }
+                    $('#getdata').click(send_data);
+
+                    function get_data(){
+                            $.ajax({
+                            type: "get",
+                            url: "mydata.php",
+                            dataType: 'json',
+                            success: function(data){
+                                //console.log(data);
+                                //document.getElementById('#mytext').innerHTML=data[0].voltage;
+                                //$('#mytext').append(data[2].current);
+                                $.each(data, function(key, database){
+                                    $('#mytext').append('<ol>status:'   +database.status+', '+
+                                                        'voltage:'      +database.voltage+', '+
+                                                        'current:'      +database.current+', '+
+                                                        'power:'        +database.po+', '+
+                                                        'ID:'           +database.ID+', '+
+                                                        'register:'     +database.reg_time+
+                                                        '</ol>')
+                                });
+                            }
+                        });
+                    }
+                    $('#request').click(get_data);
+                });
+            </script>
+        </head>
+
+        <body>
+            <button id="getdata">Click to send data</button>
+            <button id="request"></button>
+            <div id="mytext"></div>
+        </body>
+    </html>
